@@ -10,7 +10,14 @@ https://wikipedia.org/wiki/Letter_frequencies.”
 # dictionary to count the letters
 letter_count = {}
 #open file
-fhand = open('mbox-short.txt')
+#fhand = open('mbox-short.txt')
+file_name = input('Enter the name of the file, please include the file format: ')
+try:
+    fhand = open(file_name)
+
+except FileNotFoundError:
+    print('File "'+ file_name +'" could not be found. Please try again')
+    quit()
 
 # read the file
 read_text_file = fhand.read()
