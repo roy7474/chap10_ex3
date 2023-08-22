@@ -9,7 +9,6 @@ https://wikipedia.org/wiki/Letter_frequencies.”
 
 # dictionary to count the letters
 letter_count = {}
-
 #open file
 fhand = open('mbox-short.txt')
 
@@ -26,7 +25,15 @@ for char in read_text_file:
         #update letter in the dictionary
         letter_count[char] = letter_count.get(char, 0)+1
 
+
+sorted_letter_count = sorted(letter_count.items(), key = lambda item: item[1], reverse = True)
+
+'''
 #print the results
-for letter, count in letter_count.items():
-    print(f'{letter}: {count}')
+for key, value in list(letter_count.items()):
+    lst.append((key,value))
+lst.sort(reverse = True)
+'''
+for key, value in sorted_letter_count:
+    print(key, value)
     
