@@ -36,11 +36,13 @@ for char in read_text_file:
 sorted_letter_count = sorted(letter_count.items(), key = lambda item: item[1], reverse = True)
 
 '''
+lst =list()
 #print the results
 for key, value in list(letter_count.items()):
     lst.append((key,value))
-lst.sort(reverse = True)
-'''
+lst.sort(reverse = True)'''
+
+print(lst[2])
 for key, value in sorted_letter_count:
     print(key, value)
     
